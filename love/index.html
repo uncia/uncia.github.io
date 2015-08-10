@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>I Love You</title>
+	<meta name="keywords" content="有他,有她,有TA,惊喜,礼物,创意,表白,表白网,暗恋,热恋" />
+    	<link rel="shortcut icon">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url("digital-7_mono.ttf"/*tpa=http://youta.atwebpages.com/biaobai/digital-7_mono.ttf*/) format("truetype");
+		}
+	</style>
+	<link href="css/default.css"  type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/garden.js" ></script>
+    <script type="text/javascript" src="js/functions.js" ></script>
+
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<p><span class="comments">Dear </span></p>
+				<p> <span class="space"><span class="comments">        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎你来！</span></p>
+				<p><span class="comments">// 不经意相识, 或许是缘分，或许是注定的。</span><br />
+				  </p>
+				<p><span class="comments">// 以后不管怎么样，我都会在。</span><br />
+				  </p>
+				<p><span class="comments">// 就算全世界都抛弃你，记得还有我。</span><br />
+				  </p>
+				<p><span class="comments">// 再累都不用害怕，因为你有我。</span><br />
+				  </p>
+				<p><span class="comments">// 记得在你最需要的时候想起我。</span><br />
+				  </p>
+				<p><span class="comments">// 我会一直陪着你。</span><br />
+				  </p>
+				<p><span class="comments">// ..永远的..</span><br />
+				 
+                  </p>
+				<p><span class="comments">// 希望能和你有一段美好的回忆，给你一声祝福，一个拥抱，爱你到永远！相信我，我会傻傻爱你到永远。</span><br />
+                 
+				              </span></p>
+	    <p><br />
+				      <span class="space"/><span class="comments">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;----- Uncia</span><br />
+			        </p>
+			</div>
+<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						 这是我们认识的第						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Dear 永远爱你！<br/>
+						<div class="signature">的Uncia</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2009, 10, 20);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：IE低版本用户请一边惭愧去吧^_^<br/>"+
+				"推荐使用浏览器 <a href='http://dl.pconline.com.cn/download/51614.html' target='_blank'>Chrome 14+</a>"+
+				"/<a href='http://download.microsoft.com/download/0/4/9/049A037E-B6B4-4303-90BE-BA6CAE979674/IE10-Windows6.1-x86-zh-cn.exe' target='_blank'>IE 9+</a>"+
+				"/<a href='http://download.firefox.com.cn/releases/partners/baidu/webins3.0/zh-CN/Firefox-setup.exe' target='_blank'>Firefox 7+</a>"+
+				"/Safari 4+<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+<EMBED src="">
+<audio autoplay="autopaly">
+					<source src="http://tsmusic24.tc.qq.com/30659638.mp3" type="audio/mp3">
+			</audio>
+</STYLE>

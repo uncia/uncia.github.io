@@ -65,7 +65,7 @@ input:focus,textarea:focus{outline:none;}
 .topsearch{ display:inline; float:left; padding:13px 30px 0 30px; }
 .topsearch .searchipt { width:230px; height:20px; padding:4px 15px;font-size:12px; float:left; border:1px solid #dcdcdc; margin-right:-1px; border-radius:16px 0 0 16px; color:#eee; }
 .topsearch .searchbtn{ width:42px; height:30px; float:left; border:0; padding:0; cursor:pointer; border-radius:0 16px 16px 0;  background:url(../img/search.png) -2px -42px no-repeat; border:1px solid #dcdcdc; }
-.topsearch .searchbtn{ width:42px; height:30px; float:left; border:0; padding:0; cursor:pointer; border-radius:0 16px 16px 0;  background:hsla(0, 0%, 93%, 0); border:1px solid #dcdcdc; }
+.topsearch .searchbtn2{ width:42px; height:30px; float:left; border:0; padding:0; cursor:pointer; border-radius:0 16px 16px 0;  background:hsla(0, 0%, 93%, 0); border:1px solid #dcdcdc; }
 .topsearch .ipt-focus{color:#999;}
 
 

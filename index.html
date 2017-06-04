@@ -99,37 +99,33 @@ window.onerror=function(){return true;}
 <div class="side-tips" align="center">为方便下次使用<br>请按<b>Ctrl+D</b>收藏本页面</div>
 <div class="side-tips" align="center">为方便可以使用<br>请按<b>Ctrl+F</b>搜索本页面</div>
 <div class="side-tips" align="center">Copy Code Dog 请自重!<br>请尊重辛勤劳动版权!<br>镜像需留版权.Thank you!</div>
-<div class="side-tips" align="center" id="showsectime" style="color:#FF0000;"></div>
-<script type="text/javascript">
-function NewDate(str) { 
-	str = str.split('-'); 
-	var date = new Date(); 
-	date.setUTCFullYear(str[0], str[1] - 1, str[2]); 
-	date.setUTCHours(0, 0, 0, 0); 
-	return date; 
-} 
-function showsectime() {
-	var birthDay =NewDate("2015-09-03");
-	var today=new Date();
-	var timeold=today.getTime()-birthDay.getTime();
-	
-	var sectimeold=timeold/1000
-	var secondsold=Math.floor(sectimeold);
-	var msPerDay=24*60*60*1000;
-
-	var e_daysold=timeold/msPerDay;
-	var daysold=Math.floor(e_daysold);
-	var e_hrsold=(daysold-e_daysold)*-24;
-	var hrsold=Math.floor(e_hrsold);
-	var e_minsold=(hrsold-e_hrsold)*-60;
-	var minsold=Math.floor((hrsold-e_hrsold)*-60);
-
-	var seconds=Math.floor((minsold-e_minsold)*-60).toString();
-	document.getElementById("showsectime").innerHTML = "本站已安全运行<br>"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
-	setTimeout(showsectime, 1000);
-}
-
-showsectime();
+<div class="side-tips" align="center" id="sitetime" style="color:#FF0000;"></div>
+<script>
+    function siteTime(){
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth()+1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2015,09,03,00,00,00);
+        var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+        var diff = t2-t1;
+        var diffYears = Math.floor(diff/years);
+        var diffDays = Math.floor((diff/days)-diffYears*365);
+        var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+        var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+        var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+        document.getElementById("sitetime").innerHTML="本站已安全运行<br>"+diffYears+"年"+diffDays+"天"+diffHours+"小时"+diffMinutes+"分"+diffSeconds+"秒";
+    }
+    siteTime();
 </script>
 <script>
 var _hmt = _hmt || [];
@@ -225,9 +221,13 @@ var _hmt = _hmt || [];
             </li>
                                       <li><h4><a href="https://translate.google.com/" target="_blank" title="谷歌翻译">谷歌翻译</a></h4>
             </li>
+                                      <li><h4><a href="https://www.bing.com/translator/" target="_blank" title="必应翻译">必应翻译</a></h4>
+            </li>
                                       <li><h4><a href="http://fanyi.baidu.com/#auto/zh/" target="_blank" title="百度翻译">百度翻译</a></h4>
             </li>
                                       <li><h4><a href="http://fanyi.youdao.com/" target="_blank" title="有道翻译">有道翻译</a></h4>
+            </li>
+                                      <li><h4><a href="http://www.worldlingo.com/zh/microsoft/computer_translation.html" target="_blank" title="World翻译">World翻译</a></h4>
             </li>
                                       <li><h4><a href="http://www.entts.com/" target="_blank" title="英语发音">英语发音</a></h4>
             </li>
@@ -555,6 +555,8 @@ var _hmt = _hmt || [];
             </li>
                                       <li><h4><a href="https://www.blackh4t.org/" target="_blank" title="DarkRay's">DarkRay's</a></h4>
             </li>
+                                      <li><h4><a href="http://www.alisix.top/" target="_blank" title="回首">回首</a></h4>
+            </li>
                                       <li><h4><a href="http://www.cnblogs.com/bjblcracked" target="_blank" title="半斤八兩">半斤八兩</a></h4>
             </li>
                                       <li><h4><a href="http://crack4r.cc/" target="_blank" title="Sound">Sound</a></h4>
@@ -847,7 +849,9 @@ var _hmt = _hmt || [];
             </li>
                                       <li><h4><a href="https://phpinfo.me/bing.php" target="_blank" title="phpinfo">phpinfo</a></h4>
             </li>
-                                      <li><h4><a href="https://bestsec.net/bing.php" target="_blank" title="bestsec">bestsec</a></h4>
+                                      <li><h4><a href="https://phpinfo.me/bing.php" target="_blank" title="phpinfo">phpinfo</a></h4>
+            </li>
+                                      <li><h4><a href="http://www.hackmall.cn/" target="_blank" title="hackmall">hackmall</a></h4>
             </li>
                                       <li><h4><a href="http://www.webscan.cc/" target="_blank" title="webscan">webscan</a></h4>
             </li>
@@ -961,8 +965,8 @@ var _hmt = _hmt || [];
             </li>
 <!--                                       <li><h4><a href="http://whois.pconline.com.cn/" target="_blank" title="太平洋IP">太平洋IP</a></h4>
             </li> -->
-                                      <li><h4><a href="http://ip.zishuo.net/" target="_blank" title="zishuo">zishuo</a></h4>
-            </li>
+<!--                                       <li><h4><a href="http://ip.zishuo.net/" target="_blank" title="zishuo">zishuo</a></h4>
+            </li> -->
                                       <li><h4><a href="https://ip.rtbasia.com/" target="_blank" title="RTBAsia">RTBAsia</a></h4>
             </li>
                                       <li><h4><a href="http://www.1ysgo.cn/sgk/" target="_blank" title="位置IP查询">位置IP查询</a></h4>
@@ -973,7 +977,7 @@ var _hmt = _hmt || [];
             </li>
                                       <li><h4><a href="http://ip.fbisb.com/" target="_blank" title="罂粟 IP">罂粟 IP</a></h4>
             </li>
-                                      <li><h4><a href="http://www.shgcx.org/ipquery/" target="_blank" title="社会工程学 IP">社会工程学 IP</a></h4>
+                                      <li><h4><a href="http://www.tolur.org/ip/" target="_blank" title="IT同路人IP">IT同路人IP</a></h4>
             </li>
                                       <li><h4><a href="http://ip.webbaozi.com/" target="_blank" title="IP定位">IP定位</a></h4>
             </li>

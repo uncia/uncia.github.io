@@ -1,1 +1,4 @@
-{"pong":false,"message":""}
+{
+	"pong": true,
+	"message": ""
+}

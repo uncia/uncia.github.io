@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Google Hacking</title>
+</head>
+<body>
+        <center>
+                <br>Google Hack！<br>
+    <br>
+                URL：<input type="text" id="url" placeholder=" site.com">
+                <input type="submit" onclick="getURL()" value="Pwn">
+                <br><br>
+                <hr>
+                <div id="content">
+                </div>
+        </center>
+        <script type="text/javascript">
+                function getURL(){
+                        document.getElementById("content").innerHTML = "";
+                        var v = document.getElementById("url").value;
+                        var i = 0;
+                        var x = "";
+                        var hack = new Array(
+                                "https://www.google.com/search?q=site:" + v + "+intitle:index.of",
+                                "https://www.google.com/search?q=site:" + v + "+ext:xml+|+ext:conf+|+ext:cnf+|+ext:reg+|+ext:inf+|+ext:rdp+|+ext:cfg+|+ext:txt+|+ext:ora+|+ext:ini",
+                                "https://www.google.com/search?q=site:" + v + "+ext:sql+|+ext:dbf+|+ext:mdb",
+                                "https://www.google.com/search?q=site:" + v + "+ext:log",
+                                "https://www.google.com/search?q=site:" + v + "+ext:bkf+|+ext:bkp+|+ext:bak+|+ext:old+|+ext:backup",
+                                "https://www.google.com/search?q=site:" + v + "+inurl:login+|+inurl:admin+|+intitle:登陆+|+intitle:后台+|+intitle:管理+|+intitle:认证",
+                                "https://www.google.com/search?q=site:" + v + "+intext:%22sql+syntax+near%22+|+intext:%22syntax+error+has+occurred%22+|+intext:%22incorrect+syntax+near%22+|+intext:%22unexpected+end+of+SQL+command%22+|+intext:%22Warning:+mysql_connect()%22+|+intext:%22Warning:+mysql_query()%22+|+intext:%22Warning:+pg_connect()%22",
+                                "https://www.google.com/search?q=site:" + v + "+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv",
+                                "https://www.google.com/search?q=site:" + v + "+ext:php+intitle:phpinfo+%22published+by+the+PHP+Group%22",
+                                "https://www.google.com/search?q=site:" + v + "+%22PHP+Parse+error%22+|+%22PHP+Warning%22+|+%22PHP+Error%22"
+                        )
+                        var txt = new Array(
+                                "目录遍历漏洞",
+                                "配置文件泄露",
+                                "数据库文件泄露",
+                                "日志文件泄露",
+                                "备份和历史文件",
+                                "登录页面",
+                                "SQL错误",
+                                "公开文件信息",
+                                "phpinfo()",
+                                "PHP错误/警告"
+                        )
+
+                        while (i<10)
+                        {
+                                x = document.getElementById("content").innerHTML;
+                                document.getElementById("content").innerHTML = x + "<br><br><a href='" + hack[i] + "' target='__blank'>" + txt[i] + "</a>";
+                                i++;
+                        }
+                }
+        </script>
+</body>
+</html>

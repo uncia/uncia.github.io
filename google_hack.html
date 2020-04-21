@@ -6,9 +6,9 @@
 </head>
 <body>
         <center>
-                <br>Google Hack！<br>
+                <br>Hey Google Hack！<br>
     <br>
-                URL：<input type="text" id="url" placeholder=" site.com">
+                URL：<input type="text" id="url" placeholder="xssav.com">
                 <input type="submit" onclick="getURL()" value="Pwn">
                 <br><br>
                 <hr>
@@ -31,7 +31,10 @@
                                 "https://www.google.com/search?q=site:" + v + "+intext:%22sql+syntax+near%22+|+intext:%22syntax+error+has+occurred%22+|+intext:%22incorrect+syntax+near%22+|+intext:%22unexpected+end+of+SQL+command%22+|+intext:%22Warning:+mysql_connect()%22+|+intext:%22Warning:+mysql_query()%22+|+intext:%22Warning:+pg_connect()%22",
                                 "https://www.google.com/search?q=site:" + v + "+ext:doc+|+ext:docx+|+ext:odt+|+ext:pdf+|+ext:rtf+|+ext:sxw+|+ext:psw+|+ext:ppt+|+ext:pptx+|+ext:pps+|+ext:csv",
                                 "https://www.google.com/search?q=site:" + v + "+ext:php+intitle:phpinfo+%22published+by+the+PHP+Group%22",
-                                "https://www.google.com/search?q=site:" + v + "+%22PHP+Parse+error%22+|+%22PHP+Warning%22+|+%22PHP+Error%22"
+                                "https://www.google.com/search?q=site:" + v + "+%22PHP+Parse+error%22+|+%22PHP+Warning%22+|+%22PHP+Error%22",
+                                "https://www.google.com/search?q=site:pastebin.com+|+site:paste2.org+|+site:pastehtml.com+|+site:slexy.org+|+site:snipplr.com+|+site:snipt.net+|+site:textsnip.com+|+site:bitpaste.app+|+site:justpaste.it+|+site:heypasteit.com+|+site:hastebin.com+|+site:dpaste.org+|+site:dpaste.com+|+site:codepad.org+|+site:jsitor.com+|+site:codepen.io+|+site:jsfiddle.net+|+site:dotnetfiddle.net+|+site:phpfiddle.org+|+site:ide.geeksforgeeks.org+|+site:repl.it+|+site:ideone.com+|+site:paste.debian.net+|+site:paste.org+|+site:paste.org.ru+|+site:codebeautify.org++|+site:codeshare.io+|+site:trello.com+" + "%22" + v + "%22",
+                                "https://www.google.com/search?q=site:github.com+|+site:gitlab.com+" + "%22" + v + "%22",
+                                "https://www.google.com/search?q=site:stackoverflow.com+" + "%22" + v + "%22",
                         )
                         var txt = new Array(
                                 "目录遍历漏洞",
@@ -43,10 +46,13 @@
                                 "SQL错误",
                                 "公开文件信息",
                                 "phpinfo()",
-                                "PHP错误/警告"
+                                "PHP错误/警告",
+                                "搜索Pastebin.com和粘贴站点",
+                                "搜索Github.com和Gitlab.com",
+                                "搜索Stackoverflow.com"
                         )
 
-                        while (i<10)
+                        while (i<13)
                         {
                                 x = document.getElementById("content").innerHTML;
                                 document.getElementById("content").innerHTML = x + "<br><br><a href='" + hack[i] + "' target='__blank'>" + txt[i] + "</a>";
